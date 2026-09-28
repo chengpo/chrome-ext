@@ -1,0 +1,7 @@
+.text-14-scalable {
+    font-size: 0.95rem !important;
+}
+
+:root {
+    --font-body: 0.95rem !important;
+}

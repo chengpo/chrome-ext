@@ -1,0 +1,27 @@
+{
+    "name": "Pretty Buddy",
+    "version": "1.0",
+    "description": "A Chrome extension to customize websites.",
+    "manifest_version": 3,
+
+    "content_scripts": [
+        {
+            "matches": ["https://*.reddit.com/*", "https://reddit.com/*"],
+            "css": ["override-reddit.css"],
+            "js": ["remove-element.js", "override-reddit.js"],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://jandan.net/*"],
+            "css": ["override-jandan.css"],
+            "js": ["remove-element.js", "override-jandan.js"],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://leetcode.com/*"],
+            "css": ["override-leetcode.css"],
+            "js": ["remove-element.js", "override-leetcode.js"],
+            "run_at": "document_idle"
+        }
+    ]
+}
