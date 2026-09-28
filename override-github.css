@@ -1,0 +1,10 @@
+/* Target the specific React textarea component */
+textarea.react-blob-print-hide,
+.react-blob-textarea,
+.react-code-text,
+.react-line-numbers
+div:has(> textarea.react-blob-print-hide) textarea {
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+  font-family: 'JetBrainsMono Nerd Font', monospace !important;
+}

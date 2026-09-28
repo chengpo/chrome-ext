@@ -22,6 +22,11 @@
             "css": ["override-leetcode.css"],
             "js": ["remove-element.js", "override-leetcode.js"],
             "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://github.com/*"],
+            "css": ["override-github.css"],
+            "run_at": "document_idle"
         }
     ]
 }
