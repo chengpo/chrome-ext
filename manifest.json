@@ -27,6 +27,12 @@
             "matches": ["https://github.com/*"],
             "css": ["override-github.css"],
             "run_at": "document_idle"
-        }
+        },
+        {
+            "matches": ["https://gemini.google.com/*"],
+            "css": ["override-gemini.css"],
+            "js": ["override-gemini.js"],
+            "run_at": "document_idle"
+        }      
     ]
 }

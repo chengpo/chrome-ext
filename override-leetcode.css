@@ -1,12 +1,3 @@
 [class^="markdown-content"] {
     font-size: 0.9rem !important;
 }
-
-.view-lines, .cm-editor, .cm-line {
-    font-size: 0.9rem !important;
-    font-family: 'JetBrainsMono Nerd Font', monospace !important;
-}
-
-body {
-    font-size: 0.9rem !important;
-}
