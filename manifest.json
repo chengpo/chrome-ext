@@ -33,6 +33,18 @@
             "css": ["override-gemini.css"],
             "js": ["override-gemini.js"],
             "run_at": "document_idle"
-        }      
+        },
+        {
+            "matches": ["https://www.braveclojure.com/*", "https://braveclojure.com/*"],
+            "css": ["override-braveclojure.css"],
+            "js": ["override-braveclojure.js"],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://warsus.github.io/*"],
+            "css": ["override-lions.css"],
+            "all_frames": true,
+            "run_at": "document_idle"
+        }
     ]
 }

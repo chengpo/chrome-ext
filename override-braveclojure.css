@@ -1,0 +1,40 @@
+p.Body,
+p.BodyFirst,
+p.x1st-Para {
+    font-size: 1.2rem !important;
+}
+
+/* Floating Action Button Style */
+.sidebar-toggle-fab {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 9999; /* Ensures button stays on top of other content */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0077c4d3;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.sidebar-toggle-fab:hover {
+  background-color: #0076c4e0;
+  transform: scale(1.05);
+}
+
+/* Sidebar Hidden State */
+.secondary.hidden {
+  display: none; /* Alternatively, use transform: translateX(-100%); for smooth sliding animations */
+}
+
+.main.expanded {
+    width: 95% !important;
+}
