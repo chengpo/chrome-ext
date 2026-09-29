@@ -1,7 +1,7 @@
 .text-14-scalable {
-    font-size: 0.95rem !important;
+    font-size: 1rem !important;
 }
 
 :root {
-    --font-body: 0.95rem !important;
+    --font-body: 1rem !important;
 }

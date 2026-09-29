@@ -28,11 +28,16 @@ function initSidebarToggle(sidebar) {
 
   const toggleBtn = document.createElement("button");
   toggleBtn.className = "sidebar-toggle-fab";
-  toggleBtn.innerHTML = "✕";
-
-  toggleBtn.addEventListener("click", () => {
+  toggleBtn.innerHTML = "☰";
+ 
+  function toggleSidebar() {
     sidebar.classList.toggle("hidden");
     document.querySelector(".main").classList.toggle("expanded"); 
+  }
+ 
+  toggleSidebar(); // Initial toggle to hide the sidebar
+  toggleBtn.addEventListener("click", () => {
+    toggleSidebar();
     toggleBtn.innerHTML = sidebar.classList.contains("hidden") ? "☰" : "✕";
   });
 
