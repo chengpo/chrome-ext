@@ -13,8 +13,8 @@
         },
         {
             "matches": ["https://jandan.net/*"],
-            "css": ["override-jandan.css"],
-            "js": ["remove-element.js", "on-theme-change.js", "override-jandan.js"],
+            "css": ["override-jandan.css", "vim-keys.css"],
+            "js": ["remove-element.js", "on-theme-change.js", "override-jandan.js", "vim-keys.js"],
             "world": "MAIN",
             "run_at": "document_idle"
         },
@@ -39,13 +39,14 @@
         },
         {
             "matches": ["https://www.braveclojure.com/*", "https://braveclojure.com/*"],
-            "css": ["override-braveclojure.css"],
-            "js": ["override-braveclojure.js"],
+            "css": ["override-braveclojure.css", "vim-keys.css"],
+            "js": ["override-braveclojure.js", "vim-keys.js"],
             "run_at": "document_idle"
         },
         {
             "matches": ["https://warsus.github.io/*"],
-            "css": ["override-lions.css"],
+            "css": ["override-lions.css", "vim-keys.css"],
+            "js": ["vim-keys.js"],
             "all_frames": true,
             "run_at": "document_idle"
         }

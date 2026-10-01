@@ -1,5 +1,7 @@
 // Hide google ads
 (function() {
+    'use strict';
+    
     const selectors = ['#mys-wrapper', '.adsbygoogle'];
     removeElement(selectors);
 })();

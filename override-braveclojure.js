@@ -1,4 +1,6 @@
 (function () {
+  'use strict';
+
   console.log("override-braveclojure.js loaded");
 
   function attachToggleWhenSidebarExists() {
