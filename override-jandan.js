@@ -33,4 +33,21 @@
   }
 
   loadGifs();
+
+  function themeChangedListener(theme){
+    const darkMode = localStorage.getItem('darkMode') === 'true';
+    const themeBtn = document.querySelector('span.header-model-btn:has(> i.bi-brightness-high)') || 
+      document.querySelector('span.header-model-btn:has(> i.bi-moon-fill)');
+    console.log("current theme : ", theme,darkMode, themeBtn);
+    if (theme === 'dark' && darkMode) {
+      return;
+    }
+    if (theme == 'light' && !darkMode) {
+      return;
+    }
+    // Toggle current theme   
+    themeBtn.click();
+  }
+
+  onThemeChange(themeChangedListener);
 })();
