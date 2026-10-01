@@ -42,7 +42,7 @@ p.x1st-Para {
 /* Dark Mode Override */ 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #333 !important;
+    background: #1f1e1e !important;
     color: #f9f8eed5 !important;
   } 
 
