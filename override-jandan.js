@@ -1,3 +1,4 @@
+// Remove google ads
 (function () {
   const selectors = ['#google-anno-sa', '.google-auto-placed', '#mys-wrapper', ".adsbygoogle", "#google-center-div", "#ad_iframe"];
   removeElement(selectors);
@@ -8,7 +9,10 @@
       div.innerHTML = '';
     }
   });
+})();
 
+// Auto load gifs
+(function () {
   function loadGifsInternal() {
     document.querySelectorAll('.gif-overlay').forEach((el) => {
       if (el.dataset.extClicked === 'true') {
@@ -33,16 +37,19 @@
   }
 
   loadGifs();
+})();
 
-  function themeChangedListener(theme){
+// Sync dark / light mode
+(function () {
+  function themeChangedListener(theme) {
     const darkMode = localStorage.getItem('darkMode') === 'true';
-    const themeBtn = document.querySelector('span.header-model-btn:has(> i.bi-brightness-high)') || 
+    const themeBtn = document.querySelector('span.header-model-btn:has(> i.bi-brightness-high)') ||
       document.querySelector('span.header-model-btn:has(> i.bi-moon-fill)');
-    console.log("current theme : ", theme,darkMode, themeBtn);
+    console.log("current theme : ", theme, darkMode, themeBtn);
     if (theme === 'dark' && darkMode) {
       return;
     }
-    if (theme == 'light' && !darkMode) {
+    if (theme === 'light' && !darkMode) {
       return;
     }
     // Toggle current theme   
