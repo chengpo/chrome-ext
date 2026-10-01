@@ -42,12 +42,12 @@ p.x1st-Para {
 /* Dark Mode Override */ 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #1f1e1e !important;
-    color: #f9f8eed5 !important;
+    background: #0a0a0a !important;
+    color: #c9c8c1d5 !important;
   } 
 
   p > code, li > code {
-    background: #829aab !important;
+    background: #556672 !important;
   }
 
   .listingblock, .pygments {
