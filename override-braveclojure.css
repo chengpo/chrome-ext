@@ -38,3 +38,19 @@ p.x1st-Para {
 .main.expanded {
     width: 95% !important;
 }
+
+/* Dark Mode Override */ 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333 !important;
+    color: #f9f8eed5 !important;
+  } 
+
+  p > code, li > code {
+    background: #829aab !important;
+  }
+
+  .listingblock, .pygments {
+    background: #4b3d42 !important;
+  }
+}

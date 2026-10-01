@@ -8,3 +8,24 @@ pre {
     font-family: "JetbrainsMono Nerd Font Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
     font-size: .9rem !important;
 }
+
+
+/* Dark Mode Override */ 
+@media (prefers-color-scheme: dark) {
+    h1, h2, h3, header, body, pre, .toc_ref, .toc_entry, .toc, nav ul li, li:hover > a, dl a {
+        background: #333 !important;
+        color: #f9f8eed5 !important;
+    }
+
+    font[color="#000000"]{
+        color: #f9f8eed5 !important;
+    }
+
+    font[color="#800000"] {
+        color:#add7eb !important;
+    }
+
+    a[name^="line"] {
+        color:#d7e7ca !important
+    }
+}
