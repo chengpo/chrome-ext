@@ -24,19 +24,15 @@
     });
   }
 
-  function loadGifs() {
-    // Observe and remove as soon as it appears
-    const observer = new MutationObserver(() => {
-      loadGifsInternal();
-    });
+  // Observe and remove as soon as it appears
+  const observer = new MutationObserver(() => {
+    loadGifsInternal();
+  });
 
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-  }
-
-  loadGifs();
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
 })();
 
 // Sync dark / light mode
