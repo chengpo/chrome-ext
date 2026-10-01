@@ -21,6 +21,8 @@
             "matches": ["https://leetcode.com/*"],
             "css": ["override-leetcode.css"],
             "js": ["remove-element.js", "override-leetcode.js"],
+            "all_frames": true,
+            "world": "MAIN",
             "run_at": "document_idle"
         },
         {
