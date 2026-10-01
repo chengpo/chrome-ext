@@ -15,6 +15,7 @@
             "matches": ["https://jandan.net/*"],
             "css": ["override-jandan.css"],
             "js": ["remove-element.js", "on-theme-change.js", "override-jandan.js"],
+            "world": "MAIN",
             "run_at": "document_idle"
         },
         {

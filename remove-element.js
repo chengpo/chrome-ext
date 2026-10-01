@@ -1,5 +1,5 @@
 function removeElementInternal(selectors) {
-  const elements = document.querySelectorAll(selectors);
+  const elements = document.querySelectorAll(selectors.join(','));
   
   elements.forEach((el) => {
     if (el.innerHTML.trim() !== '') {

@@ -16,14 +16,14 @@
   function loadGifsInternal() {
     const selectors = ['.gif-overlay', '.gif-mask', '.show_more'];
 
-    document.querySelectorAll(selectors).forEach((el) => {
+    document.querySelectorAll(selectors.join(',')).forEach((el) => {
       if (el.dataset.extClicked === 'true') {
         return;
       }
       
       el.dataset.extClicked = 'true';
       el.click();
-      
+
       console.log("Click gif overlay: " + el.tagName + " with id: " + el.id + " and class: " + el.className);
     });
   }
@@ -43,9 +43,9 @@
 (function () {
   function themeChangedListener(theme) {
     const darkMode = localStorage.getItem('darkMode') === 'true';
-    const themeBtn = document.querySelector('span.header-model-btn:has(> i.bi-brightness-high)') ||
-      document.querySelector('span.header-model-btn:has(> i.bi-moon-fill)');
-    
+    const selectors = [ 'span.header-model-btn:has(> i.bi-brightness-high)','span.header-model-btn:has(> i.bi-moon-fill)'];
+
+    const themeBtn = document.querySelector(selectors.join(','));     
     console.log("current theme : ", theme, darkMode, themeBtn);
 
     if (theme === 'dark' && darkMode) {
@@ -63,4 +63,8 @@
   }
 
   onThemeChange(themeChangedListener);
+})();
+
+(function() {
+  localStorage.setItem('jandan:settings','{gifAutoLoad: true, treeholeDefaultAnonymous: false, cdnLine: "0"}');
 })();
