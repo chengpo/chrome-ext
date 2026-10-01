@@ -14,12 +14,16 @@
 // Auto load gifs
 (function () {
   function loadGifsInternal() {
-    document.querySelectorAll('.gif-overlay').forEach((el) => {
+    const selectors = ['.gif-overlay', '.gif-mask', '.show_more'];
+
+    document.querySelectorAll(selectors).forEach((el) => {
       if (el.dataset.extClicked === 'true') {
         return;
       }
-      el.click();
+      
       el.dataset.extClicked = 'true';
+      el.click();
+      
       console.log("Click gif overlay: " + el.tagName + " with id: " + el.id + " and class: " + el.className);
     });
   }
@@ -41,15 +45,21 @@
     const darkMode = localStorage.getItem('darkMode') === 'true';
     const themeBtn = document.querySelector('span.header-model-btn:has(> i.bi-brightness-high)') ||
       document.querySelector('span.header-model-btn:has(> i.bi-moon-fill)');
+    
     console.log("current theme : ", theme, darkMode, themeBtn);
+
     if (theme === 'dark' && darkMode) {
       return;
     }
+    
     if (theme === 'light' && !darkMode) {
       return;
     }
+    
     // Toggle current theme   
-    themeBtn.click();
+    if (themeBtn) {
+      themeBtn.click();
+    }
   }
 
   onThemeChange(themeChangedListener);
