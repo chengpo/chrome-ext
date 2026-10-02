@@ -53,4 +53,13 @@ p.x1st-Para {
   .listingblock, .pygments {
     background: #4b3d42 !important;
   }
+
+  .Text-Box {
+    background-color: #4b3d42 !important;
+    margin-bottom: 20px;
+  }
+
+  img.figure {
+    background:  #c9c8c1d5 !important;
+  }
 }
