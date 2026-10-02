@@ -4,7 +4,9 @@ textarea.react-blob-print-hide,
 .react-code-text,
 .react-line-numbers
 div:has(> textarea.react-blob-print-hide) textarea {
-  font-size: 0.9rem !important;
+  font-size: .95rem !important;
+  /*
   line-height: 1.5 !important;
   font-family: 'JetBrainsMono Nerd Font', monospace !important;
+  */
 }
