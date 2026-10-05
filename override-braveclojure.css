@@ -62,4 +62,8 @@ p.x1st-Para {
   img.figure {
     background:  #c9c8c1d5 !important;
   }
+
+  blockquote {
+    background-color: #4b3d42 !important;
+  }
 }
