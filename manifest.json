@@ -50,6 +50,13 @@
             "all_frames": true,
             "match_about_blank": true,
             "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://*.msn.com/*", "https://msn.com/*"],
+            "css": ["override-msn.css"],
+            "js": ["override-msn.js"],
+            "run_at": "document_idle"
         }
+
     ]
 }

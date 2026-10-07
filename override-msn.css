@@ -1,0 +1,19 @@
+display-ads {
+    display: none !important;
+}
+
+.feedsSection-DS-EntryPoint1-1>div[class*='newsContent'] {
+    display: none !important;
+}
+
+button#newsContentTitleButton {
+    display: none !important;
+}
+
+div#ContentPreviewSlide11 {
+    display: none !important;
+}
+
+.me-stripe-placeholder.compact {
+    display: none !important;
+}
