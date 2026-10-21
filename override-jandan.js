@@ -82,7 +82,7 @@
 (function() {
   'use strict';
 
-  localStorage.setItem('jandan:settings','{gifAutoLoad: true, treeholeDefaultAnonymous: false, cdnLine: "0"}');
+  localStorage.setItem('jandan:settings','{gifAutoLoad: true, treeholeDefaultAnonymous: false, cdnLine: "3"}');
 })();
 
 (function() {
