@@ -5,3 +5,10 @@ g1-dynamic-upsell-button {
 desktop-get-app-button {
     display: none !important;
 }
+
+/* Block the background animation loop on Gemini */
+.lm-glow {
+    display: none !important;
+    animation: none !important;
+    content-visibility: hidden !important;
+}

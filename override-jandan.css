@@ -2,3 +2,11 @@
     --bs-font-sans-serif: "Microsoft YaHei", system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
     --bs-font-monospace: "Jetbrains Mono", SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace !important;
 }
+
+div.post-content {
+    display: none !important;
+}
+
+div.quick-form {
+    display: none !important;
+}
