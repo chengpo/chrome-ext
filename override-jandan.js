@@ -120,3 +120,15 @@
     }
   });
 })();
+
+(function() {
+  'use strict';
+  let titles = ['周边', '订阅会员', '广告位', '煎蛋传送门', '电子书阅读器', '站务公告'];
+  document.querySelectorAll('div:has(> h3)').forEach((div) => {
+    const h3 = div.querySelector(':scope > h3');
+    if (h3 && titles.includes(h3.textContent.trim())) {
+      div.innerHTML = '';
+    } 
+  });
+
+})();

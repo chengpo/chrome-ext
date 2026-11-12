@@ -3,10 +3,7 @@
     --bs-font-monospace: "Jetbrains Mono", SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace !important;
 }
 
-div.post-content {
-    display: none !important;
-}
-
-div.quick-form {
+div.quick-form,
+div:has(>h1.post-h1) {
     display: none !important;
 }
