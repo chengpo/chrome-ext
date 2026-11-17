@@ -7,3 +7,7 @@ div.quick-form,
 div:has(>h1.post-h1) {
     display: none !important;
 }
+
+div.sidebar-vip-cta-row {
+    display: none !important;
+}
