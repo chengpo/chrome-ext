@@ -57,22 +57,31 @@
 
   function themeChangedListener(theme) {
     const darkMode = localStorage.getItem('darkMode') === 'true';
-    const selectors = [ 'span.header-model-btn:has(> i.bi-brightness-high)','span.header-model-btn:has(> i.bi-moon-fill)'];
+    // console.log("current theme :", theme, darkMode);
 
-    const themeBtn = document.querySelector(selectors.join(','));     
-    console.log("current theme : ", theme, darkMode, themeBtn);
-
-    if (theme === 'dark' && darkMode) {
+    if (theme.includes('dark') && darkMode) {
       return;
     }
     
-    if (theme === 'light' && !darkMode) {
+    if (theme.includes('light') && !darkMode) {
       return;
     }
     
     // Toggle current theme   
+    /*
+    const selectors = ['span.header-model-btn:has(> i.bi-moon-fill)', 'span.header-model-btn:has(> i.bi-sun-fill)'];
+    const themeBtn = document.querySelector(selectors.join(','));     
     if (themeBtn) {
-      themeBtn.click();
+        console.log("theme button clicked");
+        themeBtn.click();
+    }*/
+
+    document.documentElement.classList.toggle(`dark-model`, theme === 'dark')
+    localStorage.setItem('darkMode', String(theme === 'dark'));
+    
+    const themeIcon = document.querySelector('i.bi-moon-fill, i.bi-sun-fill');
+    if (themeIcon) {
+        themeIcon.className = (theme === 'dark') ? 'bi bi-sun-fill' : 'bi bi-moon-fill';
     }
   }
 
@@ -82,7 +91,7 @@
 (function() {
   'use strict';
 
-  localStorage.setItem('jandan:settings','{gifAutoLoad: true, treeholeDefaultAnonymous: false, cdnLine: "3"}');
+  localStorage.setItem('jandan:settings','{gifAutoLoad: true, treeholeDefaultAnonymous: false}');
 })();
 
 (function() {
@@ -123,7 +132,7 @@
 
 (function() {
   'use strict';
-  let titles = ['周边', '订阅会员', '广告位', '煎蛋传送门', '电子书阅读器', '站务公告'];
+  let titles = ['周边', '订阅会员', '广告', '广告位', '煎蛋传送门', '电子书阅读器', '站务公告'];
   document.querySelectorAll('div:has(> h3)').forEach((div) => {
     const h3 = div.querySelector(':scope > h3');
     if (h3 && titles.includes(h3.textContent.trim())) {
