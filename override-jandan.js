@@ -42,7 +42,10 @@
 
   // Observe and remove as soon as it appears
   const observer = new MutationObserver(() => {
-    loadGifsInternal();
+     // Delay to wait for gif overlays fully populated
+     setTimeout(() => {
+         loadGifsInternal();
+     }, 500);
   });
 
   observer.observe(document.body, {
