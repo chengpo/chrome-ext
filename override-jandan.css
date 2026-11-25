@@ -11,3 +11,7 @@ div:has(>h1.post-h1) {
 div.sidebar-vip-cta-row {
     display: none !important;
 }
+
+div.row.user-card {
+    display: none !important;
+}

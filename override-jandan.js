@@ -13,8 +13,8 @@
 
   removeElement(selectors);
 
-  document.querySelectorAll('div:has(> h3)').forEach((div) => {
-    const h3 = div.querySelector(':scope > h3');
+  document.querySelectorAll('div.row:has(> h3)').forEach((div) => {
+    const h3 = div.querySelector('h3');
     if (h3 && h3.textContent.trim() === '广告') {
       div.innerHTML = '';
     }
@@ -132,12 +132,26 @@
 
 (function() {
   'use strict';
-  let titles = ['周边', '订阅会员', '广告', '广告位', '煎蛋传送门', '电子书阅读器', '站务公告'];
-  document.querySelectorAll('div:has(> h3)').forEach((div) => {
-    const h3 = div.querySelector(':scope > h3');
-    if (h3 && titles.includes(h3.textContent.trim())) {
-      div.innerHTML = '';
-    } 
-  });
 
+    function hideRows() {
+        let titles = ['周边', '订阅会员', '广告', '广告位', '煎蛋传送门', '电子书阅读器', '站务公告'];
+        document.querySelectorAll('div.row:has(> h3)').forEach((div) => {
+            const h3 = div.querySelector('h3');
+            if (h3 && titles.includes(h3.textContent.trim())) {
+                div.innerHTML = '';
+            } 
+        });
+    }
+
+    hideRows();
+
+    // Observe and remove as soon as it appears
+    const observer = new MutationObserver(() => {
+        hideRows();
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
 })();
